@@ -16,17 +16,37 @@
   </head>
   <body>
     <div class="mainCon">
-      <form action="index2.html">
+      <form action="#">
         <input type="text" />
         <button type="submit">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </form>
-      <div class="result"></div>
+      <div class="result">
+        <div id="place">
+          <div id="name">Bnagladesh</div>
+          <img src="https://flagsapi.com/BD/flat/32.png" alt="placeIMG">
+        </div>
+        <div class="wIMG"><img src="https://openweathermap.org/img/wn/10d@4x.png" alt="weatherIMG"></div>
+        <div class="temp"><p>30.73</p>°</div>
+        <p id="summary">Broken Clouds</p>
+      </div>
       <div class="result2">
-        <div class="res2El"></div>
-        <div class="res2El"></div>
-        <div class="res2El"></div>
+        <div class="clouds res2B"  >
+          <p>Clouds</p> 
+          <i class="fa-solid fa-cloud"></i>
+          <pre>80%</pre>
+        </div>
+        <div class="humidity res2B">
+          <p>Humidity</p>
+          <i class="fa-solid fa-droplet"></i>
+          <pre>89%</pre>
+        </div>
+        <div class="pressure res2B">
+          <p>Pressure</p>
+          <i class="fa-solid fa-gauge"></i>
+          <pre>64%</pre>
+        </div>
       </div>
     </div>
     <script src="main.js"></script>
