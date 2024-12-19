@@ -4,7 +4,6 @@
 * {
   margin: 0;
   padding: 0;
-  user-select: none;
 }
 
 body {
@@ -84,6 +83,10 @@ form button {
 .result #place #name {
   margin-right: 1rem;
 }
+.result #place img {
+  filter: drop-shadow(0px 0px 5px #696969);
+  display: none;
+}
 
 .wIMG img{
   height: 200px;
@@ -100,7 +103,7 @@ form button {
   font-family: Inter,Arial, Helvetica, sans-serif;
   font-weight: 600;
 }
-.result #summary {
+.result #description {
   position: relative;
   bottom: 25px;
   font-family: 'Courier New', Courier, monospace;
@@ -125,6 +128,7 @@ form button {
   justify-content: space-evenly;
   align-items: center;
   margin-top: 20px;
+  filter: drop-shadow(0px 0px 10px #696969);
 }
 
 .res2B p {
@@ -135,7 +139,13 @@ form button {
 .res2B i {
   font-size: 30px;
   color: white;
+  transition: all 0.2s;
 }
+
+.res2B:hover i{
+  transform: scale(1.2);
+}
+
 
 .res2B pre {
   color: white;
@@ -155,3 +165,18 @@ form button {
   background: linear-gradient(to bottom, #4570ff 50%,#0058e6 50%);
 }
 
+
+
+
+/* Define the keyframes for the realistic shaking animation */
+/* Define the keyframes for the error shaking animation */
+@keyframes errorShake {
+  0%, 100% { transform: translate(0, 0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+/* Apply the animation to the error message container */
+.errorMsg {
+  animation: errorShake 0.5s ease-in-out;
+}
